@@ -14,7 +14,7 @@ class RegistrationForm(forms.ModelForm):
 
     class Meta:  # 元类信息
         model = User
-        fields = ('username', 'email')
+        fields = ('username', 'email')  # 使用User类的用户名和邮箱
 
     # 验证某字段的命名方法以clean_开头
     def clean_password2(self):
@@ -27,4 +27,4 @@ class RegistrationForm(forms.ModelForm):
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ('phone')
+        fields = ('phone',)

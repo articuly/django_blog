@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    用户登陆
+{% endblock %}
+
+{% block header %}
+    {% include 'backend_header.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1>登录</h1>
+                <p>输入用户名和密码</p>
+                <form class="form-horizontal" action="" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="登录">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
