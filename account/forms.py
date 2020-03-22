@@ -12,7 +12,7 @@ class RegistrationForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
     password2 = forms.CharField(widget=forms.PasswordInput)
 
-    class Meta:  # 元类信息
+    class Meta:  # 内部类信息
         model = User
         fields = ('username', 'email')  # 使用User类的用户名和邮箱
 
