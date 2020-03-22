@@ -96,7 +96,7 @@ def myself_edit(request):
 @login_required(login_url='/account/login/')
 def my_image(request):
     if request.method == 'POST':
-        img = request.POST['img']
+        img = request.POST['img']  # 前端的变量名为img
         userinfo = UserInfo.objects.get(user=request.user.id)
         userinfo.photo = img
         userinfo.save()

@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+{% block title %}
+    宁静致远 - {{ article.title }}
+{% endblock %}
+
 {% block style %}
     <link rel="stylesheet" href="{% static 'editor/css/editormd.preview.css' %}">
 {% endblock %}
