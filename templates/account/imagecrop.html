@@ -56,9 +56,9 @@
                 data: {"img":img},
                 success: function (e) {
                     // location.href="{% url 'account:aboutme' %}"
-                    if (e=='1') {
+                    if (e == '1') {
                         alert("图片上传成功");
-                        parent.loation.reload()
+                        parent.location.reload()
                     } else {
                         alert("图片上传失败")
                     }

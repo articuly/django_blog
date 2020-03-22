@@ -57,17 +57,16 @@
         </div>
     </div>
     {# 引入弹出层 #}
-    <script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/layer.js' %}"></script>
     <script>
-        function upload_image_layer(){
-        layer.open({
-            title: "选择图片",
-            area: ["650px", "530px"],
-            type: 2,
-            content: "{% url 'account:my_image' %}"
-
-        })
-    }
+        function upload_image_layer() {
+            layer.open({
+                title: "选择图片",
+                area: ["650px", "530px"],
+                type: 2,
+                content: "{% url 'account:my_image' %}"
+            })
+        }
     </script>
 {% endblock %}
