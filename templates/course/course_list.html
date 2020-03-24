@@ -28,8 +28,12 @@
                             <td>{{ course.title }}</td>
                             <td>{{ course.user.username }}</td>
                             <td>{{ course.created }}</td>
-                            <td><a class="delete" href="{% url 'course:course_delete' course.id %}"><i
-                                    class="fa fa-trash" aria-hidden="true"></i></a></td>
+                            <td><a class="detail" href="{% url 'course:course_delete' course.id %}">
+                                <i class="fa fa-search" aria-hidden="true"></i></a>
+                                <a style="margin-left: 20px;" class="delete"
+                                   href="{% url 'course:course_delete' course.id %}">
+                                    <i class="fa fa-trash" aria-hidden="true"></i></a>
+                            </td>
                         </tr>
                     {% endfor %}
                 </table>
