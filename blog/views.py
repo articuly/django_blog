@@ -30,7 +30,7 @@ def blog_article(request, article_id):
 def blog_post(request):
     if request.method == 'GET':
         blog_form = BlogArticlesForm()
-        return render(request, 'blog/blog_post.html', {'blog_form': blog_form})
+        return render(request, 'blog/post.html', {'blog_form': blog_form})
     if request.method == 'POST':
         blog_form = BlogArticlesForm(request.POST)
         if blog_form.is_valid():
