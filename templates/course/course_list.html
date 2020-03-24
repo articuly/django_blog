@@ -28,7 +28,7 @@
                             <td>{{ course.title }}</td>
                             <td>{{ course.user.username }}</td>
                             <td>{{ course.created }}</td>
-                            <td><a class="detail" href="{% url 'course:course_delete' course.id %}">
+                            <td><a class="detail" target="_blank" href="{% url 'course:course_detail' course.id %}">
                                 <i class="fa fa-search" aria-hidden="true"></i></a>
                                 <a style="margin-left: 20px;" class="delete"
                                    href="{% url 'course:course_delete' course.id %}">

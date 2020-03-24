@@ -58,4 +58,4 @@ class CourseDeleteView(UserCourseMixin, DeleteView):
 
 
 class CourseDetailView(UserCourseMixin, DetailView):
-    pass
+    template_name = 'course/course_detail.html'
