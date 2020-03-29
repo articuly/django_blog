@@ -40,9 +40,9 @@ def register(request):
             profile = profile_form.save(commit=False)
             profile.user = user  # 模型里UserProfile字段对应
             profile.save()
-            return HttpResponse('恭喜，注册成功。')
+            return HttpResponse('<h1>对不起，注册失败。</h1>')
         else:
-            return HttpResponse('对不起，注册失败。')
+            return HttpResponse('<h1>恭喜，注册成功。点击<a href="/account/login/">这里</a>登陆。</h1>')
 
 
 # 显示个人信息
