@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('favicon.ico', serve, {'path': 'img/favicon.ico'}),  # 添加网站图标
     path('blog/', include('blog.urls', namespace='blog')),
+    path('', include('blog.urls', namespace='root')),  # 网址主页为blog
     path('account/', include('account.urls', namespace='account')),
     path('course/', include('course.urls', namespace='course'))
 ]
