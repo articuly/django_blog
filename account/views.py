@@ -75,8 +75,8 @@ def myself_edit(request):
             user_cd = user_form.cleaned_data
             userprofile_cd = userprofile_form.cleaned_data
             userinfo_cd = userinfo_form.cleaned_data
-            request.user.email = user_cd['email']
-            userprofile.phone = userprofile_cd['phone']
+            request.user.email = user_cd['email']  # 直接通过request调用当前用户对象
+            userprofile.phone = userprofile_cd['phone']  # 变量来自前面的对象
             userinfo.company = userinfo_cd['company']
             userinfo.profession = userinfo_cd['profession']
             userinfo.aboutme = userinfo_cd['aboutme']

@@ -21,7 +21,7 @@ class UserMixin:  # 筛选用户的类
 
 
 class UserCourseMixin(UserMixin, LoginRequiredMixin):  # 操作的模型
-    model = Course
+    model = Course  # 这里定义了model后面子类就不用再定义
     login_url = '/account/login/'
 
 
@@ -36,7 +36,7 @@ class CourseCreateView(UserCourseMixin, CreateView):
     template_name = 'course/course_create.html'
 
     def post(self, request, *args, **kwargs):
-        form = CourseCreateForm(request.POST, request.FILES)
+        form = CourseCreateForm(request.POST, request.FILES)  # 接收Post数据与文件
         if form.is_valid():
             new_course = form.save(commit=False)
             new_course.user = self.request.user
